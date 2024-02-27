@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering.Universal;
 
 public class Goall : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Goall : MonoBehaviour
         if(other.tag == "Ball")
         {
             score.Invoke();
-            profile.TryGet<LensDistortion>(out Distortion);
+            //profile.TryGet<LensDistortion>(out Distortion);
         }
     }
 }

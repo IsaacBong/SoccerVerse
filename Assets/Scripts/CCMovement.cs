@@ -14,6 +14,7 @@ public class CCMovement : MonoBehaviour
     [SerializeField] CharacterController cc;
     [SerializeField] Animator anim;
     [SerializeField] Camera cam;
+    [SerializeField] Transform model;
 
     [Header("Targetting")]
     public Transform target;
@@ -27,6 +28,7 @@ public class CCMovement : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     
@@ -50,13 +52,38 @@ public class CCMovement : MonoBehaviour
             movementDirection.Normalize();
 
             cc.Move(movementDirection * movementSpeed * Time.deltaTime);
-        }
-        //if not locked onto target, determine rotation towards walking direction
 
+            anim.SetBool("IsMoving", true);
+        }
+        else
+        {
+            anim.SetBool("IsMoving", false);
+        }
+
+        //if not locked onto target, determine rotation towards walking direction
+        if (!shouldLook || target == null)
+        {
+            Quaternion desiredDirection = Quaternion.LookRotation(movementDirection);
+            model.rotation = Quaternion.Lerp(model.rotation, desiredDirection, rotationSpeed * Time.deltaTime);
+        }
         //if locked onto target, determine rotation towards target
+        else
+        {
+            Vector3 correctedTarget = target.position;
+            correctedTarget.y = model.position.y;
+
+            Quaternion desiredDirection = Quaternion.LookRotation(target.position - model.position);
+            model.rotation = Quaternion.Lerp(model.rotation, desiredDirection, rotationSpeed * Time.deltaTime);
+        }
 
         //find direction for animation based on movement relative to faceing
+        Vector3 animationVector = model.InverseTransformDirection(cc.velocity);
+
+        anim.SetFloat("XInput", animationVector.x);
+        anim.SetFloat("XInput", animationVector.y);
 
         //process gravity: apply downward motion
+        playerVelocity.y += gravityForce * Time.deltaTime;
+        cc.Move(playerVelocity * Time.deltaTime);
     }
 }
