@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 public class Goall : MonoBehaviour
 {
     public UnityEvent score;
-    public Volume volume
+    public Volume volume;
 
     public void Start()
     {
