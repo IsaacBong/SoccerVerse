@@ -44,8 +44,25 @@ public class SaveSystem : MonoBehaviour
     public GameData LoadGame()
     {
         //check if the file already exists
-        //if so get the existing file and return it
+        if(File.Exists(filePath))
+        {
+            //if so get the existing file and return it
+            FileStream dataStream = new FileStream(filePath, FileMode.Open);
+
+            BinaryFormatter converter = new BinaryFormatter();
+            GameData saveData = converter.Deserialize(dataStream) as GameData;
+
+            dataStream.Close();
+            return saveData;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in" + filePath);
+            return null;
+        }
+        
 
         //if the file does not exist. return an error message and cancel the function
+
     }
 }
