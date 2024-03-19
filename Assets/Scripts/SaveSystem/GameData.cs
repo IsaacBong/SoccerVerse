@@ -6,16 +6,13 @@ using UnityEngine;
 public class GameData
 {
     //you can only save simple data
-    public int score = 0;
-    public string player1Name;
+    public string[] playerNames = new string[10];
+    //store arrays of our score information MAKE IT DIFFERENT FOR YOU
+    public int[] score = new int[10];
 
-    public void AddScore(int points)
-    {
-        score += points;
-    }
-    public void ResetData()
-    {
-        score = 0;
-    }
+    //Game settings or information
+    public float maxRoundTime = 120f;
+    public int maxkills = 10;
 
+    public string[] lastPlayerName = new string[2];
 }
