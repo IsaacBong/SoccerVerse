@@ -5,7 +5,7 @@ using System.Linq;
 
 public class GameMaster : MonoBehaviour
 {
-    GameData saveData = new GameData();
+    public GameData saveData = new GameData();
 
     #region Singleton
     public static GameMaster instance;
