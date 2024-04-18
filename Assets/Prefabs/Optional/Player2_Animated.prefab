@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8620730201859374737}
   m_Layer: 0
   m_Name: Player2_Animated
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5265150653561935514
 Transform:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: a0d3cb4af51614f488da94f77347ecc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a0d3cb4af51614f488da94f77347ecc6, type: 3}
       propertyPath: m_LocalPosition.x

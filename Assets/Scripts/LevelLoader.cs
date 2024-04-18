@@ -12,6 +12,6 @@ public class LevelLoader : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "player")LoadNextLevel();
+        if(other.tag == "Player")LoadNextLevel();
     }
 }
