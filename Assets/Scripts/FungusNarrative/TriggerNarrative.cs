@@ -20,7 +20,7 @@ public class TriggerNarrative : MonoBehaviour
         }
     }
 
-    void IncrementGoals()
+    public void IncrementGoals()
     {
         goalsScored++;
         if(goalsScored == 3)
