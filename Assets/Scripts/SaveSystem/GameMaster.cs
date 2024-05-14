@@ -160,19 +160,19 @@ public class GameMaster : MonoBehaviour
                 tempPlayers = SortTempList(tempPlayers, false);
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             SaveGame();
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             LoadGame();
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Plus))
         {
             RandomFillData();
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Minus))
         {
             ClearData();
         }

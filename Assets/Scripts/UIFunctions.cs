@@ -17,4 +17,12 @@ public class UIFunctions : MonoBehaviour
     {
         Application.Quit();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadLevel("MainMenu");
+        }
+    }
 }
