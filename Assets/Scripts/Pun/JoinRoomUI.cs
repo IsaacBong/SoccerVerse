@@ -8,7 +8,7 @@ using TMPro;
 public class JoinRoomUI : MonoBehaviourPunCallbacks
 {
     public TMP_InputField joinField, createField;
-    public TMP_Text debigText;
+    public TMP_Text debugText;
     public byte maxNumberPerRoom;
 
     public void AttemptToJoinRoom()
@@ -18,5 +18,14 @@ public class JoinRoomUI : MonoBehaviourPunCallbacks
     public void AttemptToCreateRoom()
     {
         PhotonNetwork.CreateRoom(createField.text, new RoomOptions { MaxPlayers = maxNumberPerRoom });
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        debugText.text = "Failed to join room because of following reason " + message;
+    }
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        debugText.text = "Failed to create room because of following reason " + message;
     }
 }

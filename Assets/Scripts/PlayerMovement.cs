@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] PhotonView view;
+
     //movement Speed
     public float movementSpeed;
     //turn Speed
@@ -21,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
     //stretch goal: ball lock
 
+    public int playerNumber;
+    private string hInput;
+    private string vInput;
+    public bool isOnline = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +45,28 @@ public class PlayerMovement : MonoBehaviour
             xInput = "Horizontal2";
             zInput = "Vertical2";
         }
+        if (isOnline) view = GetComponent<PhotonView>;
+    }
+
+    private void SetUpInputs()
+    {
+        if(isOnline)
+        {
+            hInput = "Horizontal1";
+            vInput = "Vertical1";
+            return;
+        }
+        switch (playerNumber)
+        {
+            case 1:
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isOnline && view.IsMine == false) return; //Added line for online play
+
         //get the horizontal and vertical inputs from the keyboard
         float x = Input.GetAxis(xInput);
         float y = Input.GetAxis(zInput);

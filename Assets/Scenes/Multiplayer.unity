@@ -201,7 +201,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 25072462}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042488842}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: UpdateReadyBools
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 25072461}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 25072461}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &25072462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 69275427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099236543}
+        m_TargetAssemblyTypeName: JoinRoomUI, Assembly-CSharp
+        m_MethodName: AttemptToJoinRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &69275427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,8 +746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayersPerRoom: 0
   connectPanel: {fileID: 1035895447}
-  progressPanel: {fileID: 2099236538}
-  roomPanel: {fileID: 1042488837}
+  progressPanel: {fileID: 2087531000}
+  roomPanel: {fileID: 2099236538}
   lobbyPanel: {fileID: 1042488837}
 --- !u!1 &360663481
 GameObject:
@@ -1159,7 +1207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 490520275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042488842}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: AttemptToStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &490520275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,6 +1322,7 @@ GameObject:
   - component: {fileID: 714069238}
   - component: {fileID: 714069237}
   - component: {fileID: 714069236}
+  - component: {fileID: 714069239}
   m_Layer: 5
   m_Name: LeaveRoom
   m_TagString: Untagged
@@ -1332,7 +1393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 714069237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042488842}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: LeaveRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &714069237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,6 +1444,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714069234}
   m_CullTransparentMesh: 1
+--- !u!114 &714069239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714069234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &888443917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 888443920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099236543}
+        m_TargetAssemblyTypeName: JoinRoomUI, Assembly-CSharp
+        m_MethodName: AttemptToCreateRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &888443920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2104,6 +2211,7 @@ GameObject:
   - component: {fileID: 1042488841}
   - component: {fileID: 1042488840}
   - component: {fileID: 1042488839}
+  - component: {fileID: 1042488842}
   m_Layer: 5
   m_Name: RoomLobby
   m_TagString: Untagged
@@ -2199,6 +2307,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042488837}
   m_CullTransparentMesh: 1
+--- !u!114 &1042488842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042488837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5fe3c2fe907134cac79d716aa0ac54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNameField: {fileID: 1522494638}
+  readyButton: {fileID: 1537518086}
+  cancelButton: {fileID: 25072461}
+  playButton: {fileID: 490520274}
+  roomName: {fileID: 1076459664}
+  playerNumbers: {fileID: 1097349977}
+  debugText: {fileID: 1088666901}
+  isReady: 
 --- !u!1 &1047708781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4023,7 +4151,7 @@ GameObject:
   - component: {fileID: 1522494639}
   - component: {fileID: 1522494638}
   m_Layer: 5
-  m_Name: Name Input
+  m_Name: PlayerName Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4110,7 +4238,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042488842}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: UpdatePlayerName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -4128,7 +4268,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042488842}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: UpdatePlayerName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4427,7 +4579,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1537518087}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042488842}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: UpdateReadyBoolIs
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 25072461}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1537518086}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1537518087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5317,10 +5505,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc2e0cf2c7289546add008fc637f853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joinField: {fileID: 0}
-  createField: {fileID: 0}
-  debigText: {fileID: 0}
-  maxNumberPerRoom: 0
+  joinField: {fileID: 954817779}
+  createField: {fileID: 146820947}
+  debugText: {fileID: 1119137997}
+  maxNumberPerRoom: 2
 --- !u!1 &2130334657
 GameObject:
   m_ObjectHideFlags: 0
