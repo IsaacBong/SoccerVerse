@@ -45,22 +45,9 @@ public class PlayerMovement : MonoBehaviour
             xInput = "Horizontal2";
             zInput = "Vertical2";
         }
-        if (isOnline) view = GetComponent<PhotonView>;
+        if (isOnline) view = GetComponent<PhotonView>();
     }
 
-    private void SetUpInputs()
-    {
-        if(isOnline)
-        {
-            hInput = "Horizontal1";
-            vInput = "Vertical1";
-            return;
-        }
-        switch (playerNumber)
-        {
-            case 1:
-        }
-    }
 
     // Update is called once per frame
     void FixedUpdate()
