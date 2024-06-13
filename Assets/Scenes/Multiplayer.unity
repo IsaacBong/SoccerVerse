@@ -214,7 +214,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 25072461}
+      - m_Target: {fileID: 1537518086}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
         m_Mode: 6
@@ -2212,6 +2212,7 @@ GameObject:
   - component: {fileID: 1042488840}
   - component: {fileID: 1042488839}
   - component: {fileID: 1042488842}
+  - component: {fileID: 1042488843}
   m_Layer: 5
   m_Name: RoomLobby
   m_TagString: Untagged
@@ -2327,6 +2328,28 @@ MonoBehaviour:
   playerNumbers: {fileID: 1097349977}
   debugText: {fileID: 1088666901}
   isReady: 
+--- !u!114 &1042488843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042488837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1047708781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4582,7 +4605,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1042488842}
         m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
-        m_MethodName: UpdateReadyBoolIs
+        m_MethodName: UpdateReadyBools
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

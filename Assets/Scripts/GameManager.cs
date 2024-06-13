@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,10 +29,17 @@ public class GameManager : MonoBehaviour
     //spawn point
     public Transform spawnPoint;
 
+    //create a variable for the photon view component
+    //variables for spawn points for players and ball
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Timer());
+        //get the photon view variable
+
+        //check if player 1, then spawn player 1 object at location vis versa
+        //check if master client and spawn ball
     }
 
     //score goal
@@ -48,6 +57,8 @@ public class GameManager : MonoBehaviour
         }
         score.text = player1 + " | " + player2;
 
+        //only reset ball if master client
+        //if (isOnline && !photonnetwork.isMasterClient) return;
         StartCoroutine(ResetBall());
         
     }

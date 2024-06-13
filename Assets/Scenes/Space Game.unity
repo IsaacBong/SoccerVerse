@@ -921,6 +921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Afterburner
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d8c41be67f41aa545ae053b0b927f821, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d8c41be67f41aa545ae053b0b927f821, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1936,6 +1940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Afterburner
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d8c41be67f41aa545ae053b0b927f821, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d8c41be67f41aa545ae053b0b927f821, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2941,7 +2949,7 @@ MonoBehaviour:
   scrollPos: {x: 134.895, y: 93}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 360
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
