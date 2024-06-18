@@ -29,5 +29,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Online Soccer Game.unity
     guid: ace24422ff299724fadb3b12b6d78946
+  - enabled: 1
+    path: Assets/Scenes/Online Water Game.unity
+    guid: d86712b80d3e1eb4d8c3b28ca28eaeaa
+  - enabled: 1
+    path: Assets/Scenes/Online Space Game.unity
+    guid: bc83ea29f4983ef42bb4f42faa58f20c
+  - enabled: 1
+    path: Assets/Scenes/OnlineScoreBoard.unity
+    guid: 58f9f5d32e6b9134d9c2c05f6f6bec0c
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     //game state
     public bool gameOver = false;
+    public bool isOnline = false;
 
     //timer
     public float startTime;
@@ -30,14 +31,41 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint;
 
     //create a variable for the photon view component
+    public PhotonView PhotonView;
+
     //variables for spawn points for players and ball
+    public GameObject PrefabP1;
+    public GameObject PrefabP2;
+    public GameObject PrefabBall;
+    public GameObject P1SpawnPoint;
+    public GameObject P2SpawnPoint;
+    public GameObject BallSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Timer());
+        PhotonView = GetComponent<PhotonView>();
         //get the photon view variable
 
+        if (isOnline)
+        {
+            if (PhotonNetwork.IsMasterClient == true) 
+            {
+                PhotonNetwork.Instantiate(PrefabP1.name, P1SpawnPoint.transform.position, Quaternion.identity);
+                PhotonNetwork.Instantiate(PrefabBall.name, BallSpawnPoint.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                PhotonNetwork.Instantiate(PrefabP2.name, P2SpawnPoint.transform.position, Quaternion.identity);
+            }
+        }
+        else
+        {
+            Instantiate(PrefabP1, P1SpawnPoint.transform.position, Quaternion.identity);
+            Instantiate(PrefabP2, P2SpawnPoint.transform.position, Quaternion.identity);
+            Instantiate(PrefabBall, BallSpawnPoint.transform.position, Quaternion.identity);
+        }
         //check if player 1, then spawn player 1 object at location vis versa
         //check if master client and spawn ball
     }

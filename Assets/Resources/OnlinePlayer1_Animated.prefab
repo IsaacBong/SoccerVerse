@@ -351,10 +351,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834b4f9673efeb49a5b940ba4eb7890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  view: {fileID: 0}
   movementSpeed: 5
   turnSpeed: 20
   player: 0
   inputDirection: {x: 0, y: 0, z: 0}
+  playerNumber: 0
+  isOnline: 1
 --- !u!54 &5881477400309492525
 Rigidbody:
   m_ObjectHideFlags: 0
