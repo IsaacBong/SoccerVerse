@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 8620730201859374737}
   - component: {fileID: -8375542579829819009}
   - component: {fileID: 6468067231211609715}
-  - component: {fileID: -8572793743798025499}
   - component: {fileID: -6565719382578922800}
   m_Layer: 0
   m_Name: OnlinePlayer2_Animated
@@ -306,7 +305,7 @@ MonoBehaviour:
   player: 1
   inputDirection: {x: 0, y: 0, z: 0}
   playerNumber: 0
-  isOnline: 0
+  isOnline: 1
 --- !u!54 &7260810034380254328
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -383,8 +382,8 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6468067231211609715}
-  - {fileID: -8572793743798025499}
   - {fileID: -6565719382578922800}
+  - {fileID: 6402016293623092001}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -404,22 +403,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &-8572793743798025499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5117280715074619196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
 --- !u!114 &-6565719382578922800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +482,7 @@ GameObject:
   - component: {fileID: 1606870607134533114}
   - component: {fileID: 9152965115411061115}
   - component: {fileID: 6422338322078187142}
+  - component: {fileID: 6402016293623092001}
   m_Layer: 0
   m_Name: CubeBody
   m_TagString: Untagged
@@ -595,6 +579,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6402016293623092001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141846430777914028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isSprinting
+  - Type: 9
+    SynchronizeType: 2
+    Name: kick
+  m_SynchronizeLayers:
+  - SynchronizeType: 2
+    LayerIndex: 0
 --- !u!1001 &3679003613759976738
 PrefabInstance:
   m_ObjectHideFlags: 0

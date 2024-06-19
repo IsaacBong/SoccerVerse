@@ -290,7 +290,6 @@ GameObject:
   - component: {fileID: 9184328991975665742}
   - component: {fileID: -2498237876174541685}
   - component: {fileID: -8753634920340327379}
-  - component: {fileID: 730138177868794397}
   - component: {fileID: 3121380232413858644}
   m_Layer: 0
   m_Name: OnlinePlayer1_Animated
@@ -434,8 +433,8 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -8753634920340327379}
-  - {fileID: 730138177868794397}
   - {fileID: 3121380232413858644}
+  - {fileID: 274434487970336853}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -455,22 +454,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &730138177868794397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6183572455010755549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
 --- !u!114 &3121380232413858644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +482,7 @@ GameObject:
   - component: {fileID: 3747243011354560329}
   - component: {fileID: 4740017737726128831}
   - component: {fileID: 9045998146416539477}
+  - component: {fileID: 274434487970336853}
   m_Layer: 0
   m_Name: CubeBody
   m_TagString: Untagged
@@ -595,6 +579,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &274434487970336853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966771108142228543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isSprinting
+  - Type: 9
+    SynchronizeType: 2
+    Name: kick
+  m_SynchronizeLayers:
+  - SynchronizeType: 2
+    LayerIndex: 0
 --- !u!1001 &391935191906175771
 PrefabInstance:
   m_ObjectHideFlags: 0

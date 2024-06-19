@@ -52,20 +52,16 @@ public class GameManager : MonoBehaviour
         {
             if (PhotonNetwork.IsMasterClient == true) 
             {
-                PhotonNetwork.Instantiate(PrefabP1.name, P1SpawnPoint.transform.position, Quaternion.identity);
-                PhotonNetwork.Instantiate(PrefabBall.name, BallSpawnPoint.transform.position, Quaternion.identity);
+                PhotonNetwork.Instantiate(PrefabP1.name, P1SpawnPoint.transform.position, Quaternion.LookRotation(Vector3.right));
+                ball =  PhotonNetwork.Instantiate(PrefabBall.name, BallSpawnPoint.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                
             }
             else
             {
-                PhotonNetwork.Instantiate(PrefabP2.name, P2SpawnPoint.transform.position, Quaternion.identity);
+                PhotonNetwork.Instantiate(PrefabP2.name, P2SpawnPoint.transform.position, Quaternion.LookRotation(Vector3.left));
             }
         }
-        else
-        {
-            Instantiate(PrefabP1, P1SpawnPoint.transform.position, Quaternion.identity);
-            Instantiate(PrefabP2, P2SpawnPoint.transform.position, Quaternion.identity);
-            Instantiate(PrefabBall, BallSpawnPoint.transform.position, Quaternion.identity);
-        }
+        
         //check if player 1, then spawn player 1 object at location vis versa
         //check if master client and spawn ball
     }
