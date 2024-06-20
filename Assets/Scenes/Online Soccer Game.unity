@@ -2064,6 +2064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextLevelPortal
       objectReference: {fileID: 0}
+    - target: {fileID: 4830970872297796003, guid: ec37ca945b748b0419added76f3ddd74,
+        type: 3}
+      propertyPath: isOnline
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7747741965933723118, guid: ec37ca945b748b0419added76f3ddd74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2201,6 +2206,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 906555439190622590, guid: e1eadb9a7193e0545b59d7b41dce8c63,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3541341809410925806, guid: e1eadb9a7193e0545b59d7b41dce8c63,
         type: 3}
       propertyPath: selectedCommands.Array.size
@@ -2275,7 +2285,8 @@ PrefabInstance:
         type: 3}
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6643350644702728797, guid: 1d59f71b127db8f4a93feccc000e115e,
+        type: 3}
     - target: {fileID: 6418853751985295408, guid: e1eadb9a7193e0545b59d7b41dce8c63,
         type: 3}
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

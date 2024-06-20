@@ -149,6 +149,7 @@ public class GameManager : MonoBehaviour
             finishScreen.GetComponent<Image>().color = color3;
             result.text = "TIE" + "\n" + player1.ToString("00") + "|" + player2.ToString("00");
         }
+        GameMaster.instance.SaveGame();
         finishScreen.SetActive(true);
     }
 }

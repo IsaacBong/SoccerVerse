@@ -10,14 +10,10 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if (isOnline)
+        if (isOnline && PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }            
+        }          
     }
 
     public void OnTriggerEnter(Collider other)

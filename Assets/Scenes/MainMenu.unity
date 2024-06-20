@@ -661,7 +661,7 @@ MonoBehaviour:
     score: 0
   tempPlayers: []
   debugButtons: 1
-  loadOnStart: 0
+  loadOnStart: 1
 --- !u!1 &6533152164427874060
 GameObject:
   m_ObjectHideFlags: 0
